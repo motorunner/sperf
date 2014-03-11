@@ -148,6 +148,11 @@ for key in sorted(sar_dict):
             xlprcsw_sheet.write( r, 0, time)
             r = r+1
             write_data( prcsw_hash, time, xlprcsw_sheet, r)
+
+    if key == 'page':
+        print "Processing pageing..."
+        page_hash = sar_dict[key]
+        print page_hash
         
         
 xlbook.save(outxlfile)
